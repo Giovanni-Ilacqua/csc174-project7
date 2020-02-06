@@ -1,0 +1,352 @@
+/* SMACCS Architecture */
+
+/* font-family: 'Oswald', sans-serif; */
+
+@font-face {
+    font-family: 'h74_ocelot_pissregular';
+    src: url('hocelotpiss-regular-webfont.woff2') format('woff2'),
+         url('hocelotpiss-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*	****************************************
+			BASE
+	**************************************** */
+html, body {
+	height: 100%; /* magic for long scolly pages with sections, part 1 */
+	margin: 0; /* typical - gets rid of the default margin on the BODY */
+	font-family: 'Oswald', Impact, sans-serif;
+	
+}
+
+
+p {
+	margin-top: 0; 
+}
+
+section {
+    min-height: 100%;  /* magic for long scolly pages with sections, part 2 */
+    /*padding-top: 75px;*/ /* how tall is the persistent nav bar at the top? */
+    display: flex;
+    
+}
+
+fieldset{
+	border: none;
+}
+
+form{
+	color: white;
+}
+
+
+/*	****************************************
+			LAYOUT
+	**************************************** */
+
+	.container {
+		margin: 0 auto;
+		width: 80%;
+		max-width: 960px; 
+		align-self: center;
+	}
+	
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		/* justify-content: center; */
+	
+	}
+
+	.hero-grid{
+		display: grid;
+		grid-template-columns: 10fr auto;
+		margin-left: 10%;
+		
+		
+	}
+
+
+	.reason-grid{
+		display: grid;
+		grid-template-columns: 60% 40%;
+	}
+
+	.footer-wrapper{
+		display: inline-flex;
+		position: relative;
+		width: 99vw;
+		padding: 5px 5px; 
+	}
+
+	#admin-login{
+		position: absolute;
+		bottom: 5px;
+		right: 20px; 
+		text-decoration: none;
+	}
+
+	#cricket{
+		margin-left: 80%;
+	}
+
+	.admin-area-grid{
+		display: grid;
+		grid-template-columns: 10fr auto;
+		margin-bottom: 30px;
+	}
+
+/*	****************************************
+			MODULES
+	**************************************** */
+
+.main-menu {
+	position: fixed; /* required - magic */
+	top: 0; /* required - makes sure the menu sits where it's supposed to sit */
+	z-index: 1000; /* required - makes sure the menu doesn't get covered by anything else */
+	width: 100%; /* required - makes the menu go all the way across the viewport */
+	background-color: red; 
+	display: flex;
+	justify-content: space-between;
+}
+.main-menu ul {
+	/* standard removal of UL styles */
+	margin: 0;
+	padding-left: 0;
+	list-style-type: none;
+
+	/* required - get LIs to line-up side-by-side */
+	display: flex;
+	justify-content: flex-end; /* optional - lots of options */
+}
+
+.main-menu h1{
+	font-weight: normal;
+	font-size: 16px;
+	margin: 0;
+}
+
+.main-menu a { 
+	/* typical - make links look/act like buttons */
+	display: block;
+	padding: 15px;
+	color: white;
+	text-decoration: none;
+}
+.main-menu a:hover { color: #000000; }
+
+.main-menu #home {
+	float:left;
+}
+
+.hero{
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+
+	/* Background styles */
+    background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/03/16/17/istock-636625696.jpg?w968");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-inner{
+	position: absolute;
+	bottom: 10px;
+	width: 90%;
+}
+
+.hero-grid h2{
+	font-family: "h74_ocelot_pissregular", "Arial Black", sans-serif;
+	color: white;
+	line-height: 1.5em;
+	font-size: 28px;
+	letter-spacing: 2px;
+
+
+	text-shadow: 0px 3px 0px #000000;
+}
+
+.hero-grid a{
+	text-decoration: none;
+	color: white;
+}
+
+#why-crickets{
+	background-color: #F4F4F5;
+}
+
+#why-crickets h2{
+	font-family: "h74_ocelot_pissregular", "Arial Black", sans-serif;
+	color: black;
+	font-size: 48px;
+	letter-spacing: 4px;
+}
+
+#why-crickets article{
+	border: 1px black solid;
+	padding: 0px 20px;
+	margin-bottom: 30px;
+	background-color: white;
+}
+
+.articles-container{
+	margin: 0px auto;
+	width: 90%;
+}
+
+.reason-grid ul{
+	border-right: 3px solid black;
+	padding-right: 10px;
+}
+
+.reason-grid img{
+	width: 100%;
+	padding-left: 10px;
+	padding: 10px;
+	
+}
+
+.reason-grid li{
+	font-weight: 400;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+
+#survey{
+	background-color: #22222C;
+}
+
+#survey h2{
+	font-family: "h74_ocelot_pissregular", "Arial Black", sans-serif;
+	color: white;
+	font-size: 48px;
+	letter-spacing: 4px;
+}
+
+.form-grid{
+	width: 90%;
+	margin: 0px auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.left-margin{
+	margin-left: 170px;
+}
+
+.form-grid fieldset{
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.short-answer{
+	width: 180px;
+}
+
+.full-row{
+	grid-column: 1/-1;
+}
+
+.form-grid textarea{
+	width: 100%;
+	height: 100px;
+}
+
+.submit-button{
+	width: 150px;
+	background-color: red;
+	border: none;
+	color: white;
+	font-family: 'Oswald', Impact, sans-serif;
+	font-size: 16px;
+
+	margin-bottom: 50px;
+	margin-left: 14px;
+
+}
+
+
+.footer-wrapper{
+	background-color: red;
+}
+
+.footer-wrapper p{
+	margin: 0;
+}
+
+.footer-wrapper a,.footer-wrapper p{
+	font-size: 14px;
+	color: white;
+}
+
+.admin-wrapper{ 
+	width: 350px; 
+	padding: 20px;
+	margin: 0px auto;
+}
+
+.admin-wrapper form{ 
+	color: #22222C;
+}
+
+.log-out-btn{
+	margin: 20px 0px 10px 0px;
+}
+
+.thanks-message{
+	padding: 10px;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	letter-spacing: 1px;
+	padding: 0px;
+
+}
+
+.spacing{
+	letter-spacing: 3px;
+}
+/*	****************************************
+			STATE
+	**************************************** */
+.main-menu .is-current a { 
+	color: white;
+	border-bottom: 5px solid white;
+	padding-bottom: 10px;
+	
+}
+
+
+
+/*	****************************************
+			THEME
+	**************************************** */
+
+	.red-bground{
+		background-color: red;
+		padding: 4px 5px;
+	}
+
+	.header-font{
+		font-family: 'Oswald', sans-serif;
+		letter-spacing: 3px;
+		text-align: center;
+	}
+
+	.sub-header-font{
+		font-family: 'Oswald', sans-serif;
+		letter-spacing: 0px;
+		font-size: 24px;
+		display: inline-flex;
+
+
+	}
